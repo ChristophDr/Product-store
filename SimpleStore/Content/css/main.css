@@ -1,0 +1,32 @@
+#nav-search{
+  background-color: blue;
+  width: 50%;
+  float: left;
+  height: inherit;
+  position: absolute;
+}
+#nav-actions{
+  background-color: red;
+  width: 50%;
+  margin-left: 50%;
+  height: inherit;
+  position: absolute;
+  margin-top: 0px;
+}
+.nav-container{
+  font-family:inherit;
+  display:inline-block;
+  color:#ffffff;
+  z-index: 2;
+  padding-left:0px;
+  padding-right:0px;
+  margin-top:6%;
+  height:4em;
+  width:100%;
+}
+#table-container{
+  margin-top: 4%;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+}
