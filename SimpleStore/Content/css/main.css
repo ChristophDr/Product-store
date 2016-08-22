@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #nav-search{
   background-color: none;
   width: 50%;
@@ -46,3 +47,53 @@
   color:#0073e6;
 
 }
+=======
+#nav-search{
+  background-color: none;
+  width: 50%;
+  float: left;
+  height: inherit;
+  position: absolute;
+  margin-left: 14%;
+}
+#nav-date{
+  background-color: none;
+  margin-left: 40%;
+  height: inherit;
+  position: absolute;
+  margin-top: 0px;
+}
+#nav-actions{
+  background-color: none;
+  width: 50%;
+  margin-left: 60%;
+  height: inherit;
+  position: absolute;
+  margin-top: 0px;
+}
+.nav-container{
+    background-color: none;
+  font-family:inherit;
+  display:inline-block;
+  color:#ffffff;
+  z-index: 2;
+  padding-left:0px;
+  padding-right:0px;
+  margin-top:6%;
+  height:4em;
+  width: 100%;
+}
+.btn-fix{
+  margin-right: 10px;
+}
+#table-container{
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+}
+.table-title{
+  color:#0073e6;
+
+}
+>>>>>>> 6f232493ba90ce9dca2a9c949e520de3e54e035e
