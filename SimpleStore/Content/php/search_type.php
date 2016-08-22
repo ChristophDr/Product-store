@@ -1,5 +1,6 @@
 <?php
-
+$temp_text = $_POST['temp_input_text'];
+$temp_date = $_POST['temp_input_date'];
 echo "<table id='product-table' class='table table-bordered table-condensed table-striped'>";
 echo "<tr>";
 echo "<td><b><input type='checkbox' name='all_selected' value=''></b></td>";
@@ -13,7 +14,23 @@ echo "<td class='table-title'><b>Modified</b></td>";
 echo "<td><b>Actions</b></td>";
 echo "</tr>";
 include('config.php');
-$sql = "SELECT * FROM products";
+
+$sql = "SELECT * FROM products WHERE ";
+if(!empty($temp_text))
+{
+  $sql = $sql . "name LIKE '%" . $temp_text . "%' OR description LIKE '%" . $temp_text . "%'";
+}
+if(!empty($temp_date))
+{
+  if(!empty($temp_text))
+  {
+    $sql = $sql . " AND ";
+  }
+  list($start_date, $end_date) = explode('to', $temp_date);
+  $sql = $sql . "created BETWEEN '".  str_replace(' ', '', $start_date) ."' AND '".  str_replace(' ', '', $end_date) ."' ORDER BY created DESC";
+}
+
+
 
 foreach ($conn->query($sql) AS $row) {
 echo "<tr>";

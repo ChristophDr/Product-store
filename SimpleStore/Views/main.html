@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,20 +25,20 @@
               <div id="nav-search">
                 <div class="col-md-5">
                       <div class="input-group" id="adv-search">
-                            <input type="text" class="form-control" placeholder="Type product name or description" />
+                            <input id="search-description" type="text" class="form-control" placeholder="Type product name or description" onkeypress="HandleKeyPress(event)"/>
                             <div class="input-group-btn">
                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    <button type="button" class="btn btn-primary" onclick="SearchProducts()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 </div>
                             </div>
                       </div>
                   </div>
                   <div class="col-md-4">
                         <div class="input-group" id="adv-search">
-                              <input type="text"  class="form-control" name="daterange" placeholder="Date Range" />
+                              <input type="text"  class="form-control" id="daterange-picker" name="daterange" placeholder="Date Range" />
                               <div class="input-group-btn">
                                   <div class="btn-group" role="group">
-                                      <button type="button"id="datepicker-btn" onClick="DatePicker_trigger()" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                      <button type="button"id="datepicker-btn" onclick="SearchProducts()" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                   </div>
                               </div>
                         </div>
@@ -64,70 +63,3 @@
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Simple Product Store</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-    <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <script type="text/javascript" src="SimpleStore/Content/javascript/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="SimpleStore/Content/css/main.css">
-
-</head>
-<body>
-
-    <div id="header">
-        <div class="nav-container">
-              <div id="nav-search">
-                <div class="col-md-5">
-                      <div class="input-group" id="adv-search">
-                            <input type="text" class="form-control" placeholder="Type product name or description" />
-                            <div class="input-group-btn">
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </div>
-                            </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                        <div class="input-group" id="adv-search">
-                              <input type="text"  class="form-control" name="daterange" placeholder="Date Range" />
-                              <div class="input-group-btn">
-                                  <div class="btn-group" role="group">
-                                      <button type="button"id="datepicker-btn" onClick="DatePicker_trigger()" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                  </div>
-                              </div>
-                        </div>
-                    </div>
-              </div>
-              <div id="nav-actions">
-                  <button type="button" class="btn btn-danger btn-fix"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;Delete Selected </button>
-                  <button type="button" class="btn btn-info btn-fix"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Export CSV</button>
-                  <button type="button" class="btn btn-primary btn-fix"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create Product</button>
-              </div>
-          </div>
-        </div>
-
-    <div id="page-content">
-        <div id="table-container">
-          <?php
-            include("SimpleStore/Content/php/table_display.php");
-          ?>
-        </div>
-
-    </div>
-
-</body>
-</html>
->>>>>>> 6f232493ba90ce9dca2a9c949e520de3e54e035e
